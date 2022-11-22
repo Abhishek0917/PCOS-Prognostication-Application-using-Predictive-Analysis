@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            PCOS Test
+        </title>
+        <link rel="stylesheet" href="static/css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+        </style>
+
+    </head>
+    <body>
+       
+        <nav class="navbar-2">
+                <p>Women's health is one of our highest priorities ❤️</p>
+        </nav>
+        <div class="heading">
+           <br>
+           <img src="static/pcos awareness month at flo.jfif" alt="lady image">
+           <div class="middle-container">
+            <h1>Polycystic Ovary Syndrome (PCOS)</h1>
+            <h2> Prognostication Application </h2> 
+           <p class="intro"> 
+        Polycystic Ovary Syndrome (PCOS) affects 1 in 10 women of childbearing age and still goes undiagnosed in up to 70% of affected women. It can lead to health conditions such as infertility, diabetes, and cardiovascular disease. Our goal is to support millions of women who have this condition, and bring peace of mind to others who may suspect they have it.</p>
+        <a class="btn-cae" href="#form">SELF EVALUATION TEST</a>
+        <br>
+        </div>
+       </div>
+       <div class="bottom-container">
+        <h3></h3>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+          {% if POC_not_detected %}
+            <div class="alert alert-success">{{POC_not_detected}}</div>
+          {% elif POC_detected %}
+            <div class="alert alert-danger">{{POC_detected}}</div>
+          {% endif %}
+        <div class="container">
+            <h3><b>Enter Details:</b></h3>
+            <hr>
+        <div>
+        
+            <form class="form-group" action="/" method="POST">
+                <br>
+              </div class="form-floating">
+                <label class="container" for="age"><h5>Enter your age</h5></label>
+                <input class="form-control" type="number" id="age" name="age">
+                <br>
+                <label class="container" for="Weight (Kg)"><h5>Enter your Weight</h5></label>
+                <input class="form-control" type="number" id="Weight" name="Weight">
+                <br>
+                <label class="container" for="Height (cm)"><h5>Enter your Height</h5></label>
+                <input class="form-control" type="number" id="Height" name="Height">
+                <br>
+                <label class="container" for="BMI"><h5>Enter your BMI</h5></label>
+                <input class="form-control" type="number" id="BMI" name="BMI">
+                <br>
+                <label class="container" for="Blood Group"><h5>Enter your Blood Group</h5></label>
+                <input class="form-control" type="text" id="Blood Group" name="Blood Group">
+                <br>
+                <label class="container" for="Pulse rate(bpm)"><h5>Enter your Pulse rate</h5></label>
+                <input class="form-control" type="number" id="Pulse rate" name="Pulse rate">
+                <br>
+                <label class="container" for="RR (breaths/min)"><h5>Enter your RR</h5></label>
+                <input class="form-control" type="number" id="RR" name="RR">
+                <br>
+                <label class="container" for="Hb(g/dl)"><h5>Enter your Hb</h5></label>
+                <input class="form-control" type="number" id="Hb" name="Hb">
+                <br>
+                <label class="container" for="Cycle(R/I)"><h5>Enter your Cycle(R/I)</h5></label>
+                <input class="form-control" type="number" id="Cycle" name="Cycle">
+                <br>
+                <label class="container" for="Cycle length(days)"><h5>Enter your Cycle length(days)</h5></label>
+                <input class="form-control" type="number" id="Cycle length" name="Cycle length">
+                <br>
+                <label class="container" for="Marraige Status (Yrs)"><h5>Enter your Marriage Status</h5></label>
+                <input class="form-control" type="number" id="Marraige Status" name="Marraige Status">
+                <br>
+                <label class="container" for="I beta-HCG(mIU/mL)"><h5>Enter your I Beta</h5></label>
+                <input class="form-control" type="number" id="I beta" name="I beta">
+                <br>
+                <label class="container" for="II beta-HCG(mIU/mL)"><h5>Enter your II Beta</h5></label>
+                <input class="form-control" type="number" id="II beta" name="II beta">
+                <br>
+                <label class="container" for="FSH(mIU/mL)"><h5>Enter your FSH</h5></label>
+                <input class="form-control" type="number" id="FSH" name="FSH">
+                <br>
+                <label class="container" for="LH(mIU/mL)"><h5>Enter your LH</h5></label>
+                <input class="form-control" type="number" id="LH" name="LH">
+                <br>
+                <label class="container" for="FSH/LH"><h5>Enter your FSH/LH</h5></label>
+                <input class="form-control" type="number" id="FSH/LH" name="FSH/LH">
+                <br>
+                <label class="container" for="Hip(inch)"><h5>Enter your Hip in inch</h5></label>
+                <input class="form-control" type="number" id="Hip" name="Hip">
+                <br>
+                <label class="container" for="Waist(inch)"><h5>Enter your Waist in inch</h5></label>
+                <input class="form-control" type="number" id="Waist" name="Waist">
+                <br>
+                <label class="container" for="Waist:Hip Ratio"><h5>Enter your Hip/Waist Ratio</h5></label>
+                <input class="form-control" type="number" id="Waist:Hip Ratio" name="Waist:Hip Ratio">
+                <br>
+                <label class="container" for="TSH (mIU/L)"><h5>Enter your TSH</h5></label>
+                <input class="form-control" type="number" id="TSH" name="TSH">
+                <br>
+                <label class="container" for="AMH(ng/mL)"><h5>Enter your AMH</h5></label>
+                <input class="form-control" type="number" id="AMH" name="AMH">
+                <br>
+                <label class="container" for="PRL(ng/mL)"><h5>Enter your PRL</h5></label>
+                <input class="form-control" type="number" id="PRL" name="PRL">
+                <br>
+                <label class="container" for="Vit D3 (ng/mL)"><h5>Enter your Vit D3</h5></label>
+                <input class="form-control" type="number" id="Vit D3" name="Vit D3">
+                <br>
+                <label class="container" for="PRG(ng/mL)"><h5>Enter your PRG</h5></label>
+                <input class="form-control" type="number" id="PRG" name="PRG">
+                <br>
+                <label class="container" for="RBS(mg/dl)"><h5>Enter your RBS</h5></label>
+                <input class="form-control" type="number" id="RBS" name="RBS">
+                <br>
+                <label class="container" for="BP _Systolic (mmHg)"><h5>Enter your Systolic</h5></label>
+                <input class="form-control" type="number" id="BP _Systolic" name="BP _Systolic">
+                <br>
+                <label class="container" for="BP _Diastolic (mmHg)"><h5>Enter your Diastolic</h5></label>
+                <input class="form-control" type="number" id="BP _Diastolic" name="BP _Diastolic">
+                <br>
+                <label class="container" for="Follicle No. (L)"><h5>Enter your Follicle L</h5></label>
+                <input class="form-control" type="number" id="Follicle No. L" name="Follicle No. L">
+                <br>
+                <label class="container" for="Follicle No. (R)"><h5>Enter your Follicle R</h5></label>
+                <input class="form-control" type="number" id="Follicle No. R" name="Follicle No. R">
+                <br>
+                <label class="container" for="Avg. F size (L) (mm)"><h5>Enter your Avg F Size L</h5></label>
+                <input class="form-control" type="number" id="Avg. F size (L) (mm)" name="Avg. F size (L) (mm)">
+                <br>
+                <label class="container" for="Avg. F size (R) (mm)"><h5>Enter your Avg F Size R</h5></label>
+                <input class="form-control" type="number" id="Avg. F size (R) (mm)" name="Avg. F size (R) (mm)">
+                <br>
+                <label class="container" for="Endometrium (mm)"><h5>Enter your Endometrium</h5></label>
+                <input class="form-control" type="number" id="Endometrium" name="Endometrium">
+                <hr>
+                <div>Rate below according to your condition</div>
+                <br>
+                <div class="progress">
+                  <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar  progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+            <br>
+            <div class="container"><h5>Pregnant(Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Pregnant" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Pregnant" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>No. of aborptions</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="aborptions" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="aborptions" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>Weight gain(Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Weightgain" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Weightgain" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>hair growth(Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="hairgrowth" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="hairgrowth" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>Skin darkening (Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Skindarking" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Skindarking" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>Hair loss(Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Hairloss" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Hairloss" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>Pimples(Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Pimples" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Pimples" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>Fast food (Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Fastfood" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Fastfood" value="0">
+                <label for="no">No</label>
+                <hr>
+                <div class="container"><h5>Reg.Exercise(Y/N)</h5></div>
+                <input class="form-check-input" type="radio" id="yes" name="Exercise" value="1">
+                <label for="yes">Yes</label>
+                <input class="form-check-input" type="radio" id="no" name="Exercise" value="0">
+                <label for="no">No</label>
+                <hr>
+                
+                <input class="btn btn-dark" type="submit">
+                <br>
+            </form>
+            <br>
+          <div>
+            <footer id="footer-cae">
+               &copy 2021 Team Ctrl_Alt_Elite
+            </footer>
+        </div>
+    </body>
+</html>
