@@ -74,25 +74,4 @@ The quality of the predictions made can be evaluated in a visual representation 
 
 ![alt text](Results/roc-auc.png)
 
-                                                         Figure 2: RoC Curve with AuC
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                      Figure 2: RoC Curve with AuC
